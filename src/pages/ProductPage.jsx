@@ -115,7 +115,7 @@ const ProductPage = () => {
             </div>
           </div>
           <p className="text-md text-gray-700 line-clamp-3">{product?.description}</p>
-          <p className="text-2xl font-bold text-gray-800">${product?.price}</p>
+          <p className="text-2xl font-bold text-gray-800">₱{product?.price}</p>
           <div className="flex-1 overflow-auto">
             <div className="grid grid-cols-[8rem_1fr] gap-y-4">
               <span className="text-gray-600">Availability</span>
@@ -188,7 +188,7 @@ const ProductPage = () => {
               {product?.stock > 0 ? (
                 <>
                   <MdOutlineShoppingCartCheckout />
-                  Buy for ${(product?.price * quantity).toFixed(2)}
+                  Buy for ₱{(product?.price * quantity).toFixed(2)}
                 </>
               ) : (
                 <>Out of stock</>

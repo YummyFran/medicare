@@ -46,9 +46,9 @@ const ProductFilters = ({ filters, setFilters, priceRange, setPriceRange,setIsFi
       />
       <div className="py-4 flex items-center justify-end gap-2 w-full">
         <label htmlFor="from" className="text-sm">From</label>
-        <input type="text" id="from" value={`$${priceRange.min}`} onChange={e => setPriceRange(prev => ({...prev, min: e.target.value.slice(1)}))} className="outline-none font-bold text-lg focus:border border-gray-500 rounded-lg text-center h-9 py-2 px-4 field-sizing-content" />
+        <input type="text" id="from" value={`₱${priceRange.min}`} onChange={e => setPriceRange(prev => ({...prev, min: e.target.value.slice(1)}))} className="outline-none font-bold text-lg focus:border border-gray-500 rounded-lg text-center h-9 py-2 px-4 field-sizing-content" />
         <label htmlFor="to" className="text-sm">To</label>
-        <input type="text" id="to" value={`$${priceRange.max}`} onChange={e => setPriceRange(prev => ({...prev, max: e.target.value.slice(1)}))} className="outliine-none font-bold text-lg focus:border border-gray-500 rounded-lg text-center h-9 py-2 px-4 field-sizing-content" />
+        <input type="text" id="to" value={`₱${priceRange.max}`} onChange={e => setPriceRange(prev => ({...prev, max: e.target.value.slice(1)}))} className="outliine-none font-bold text-lg focus:border border-gray-500 rounded-lg text-center h-9 py-2 px-4 field-sizing-content" />
       </div>
     </>
   );

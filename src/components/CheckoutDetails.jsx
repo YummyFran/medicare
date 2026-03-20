@@ -84,13 +84,13 @@ const CheckoutDetails = ({ setSummary }) => {
             <p className="text-md">
               {item.quantity} x {item.title}
             </p>
-            <p className="text-lg">${item.subtotal.toFixed(2)}</p>
+            <p className="text-lg">₱{item.subtotal.toFixed(2)}</p>
           </div>
         ))}
       {giftCodeStatus == "valid" && selected?.length > 0 && (
         <div className="flex justify-between items-center text-gray-500">
           <p className="text-md">Gift code discount</p>
-          <p className="text-lg text-green-500">-${DISCOUNT}</p>
+          <p className="text-lg text-green-500">-₱{DISCOUNT}</p>
         </div>
       )}
       {
@@ -103,7 +103,7 @@ const CheckoutDetails = ({ setSummary }) => {
             <hr className="m-2"/>
             <div className="flex justify-between items-center text-gray-500">
                 <p className="text-md font-bold">Total Amount</p>
-                <p className="text-lg font-bold">${(Math.max(calculatedAmount, 0)).toFixed(2)}</p>
+                <p className="text-lg font-bold">₱{(Math.max(calculatedAmount, 0)).toFixed(2)}</p>
             </div>
             <button onClick={() => handleCheckout()} className="bg-gray-800 text-white py-2 rounded-md cursor-pointer hover:bg-gray-700 mt-4">Checkout</button>
         </>

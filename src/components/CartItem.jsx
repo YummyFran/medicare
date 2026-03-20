@@ -45,7 +45,7 @@ const CartItem = ({ item, selected, setSelected }) => {
                 <span>{item.shippingInformation}</span>
             </p>
             <div className='flex flex-col md:flex-row justify-between gap-2 md:items-end mt-auto'>
-                <p className='font-bold text-xl text-gray-800'>${(item.subtotal).toFixed(2)}</p>
+                <p className='font-bold text-xl text-gray-800'>₱{(item.subtotal).toFixed(2)}</p>
                 <div className="flex">
                 <button
                   className="border border-gray-500 px-3 h-8 flex justify-center items-center rounded-l-md cursor-pointer"

@@ -28,7 +28,7 @@ const ProductCard = ({ product, className }) => {
                 {
                     product ? 
                         <>
-                            <p className='text-xl font-bold'>${product?.price}</p>
+                            <p className='text-xl font-bold'>₱{product?.price}</p>
                             <p className={`text-xs ${product?.stock > 0 ? '' : 'text-red-500'}`}>{product?.stock} items left</p>
                         </>
                     : 
